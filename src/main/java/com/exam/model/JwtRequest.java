@@ -2,7 +2,7 @@ package com.exam.model;
 
 public class JwtRequest {
 	String username;
-	String passwors;
+	String password;
 	/**
 	 * 
 	 */
@@ -12,12 +12,12 @@ public class JwtRequest {
 	}
 	/**
 	 * @param username
-	 * @param passwors
+	 * @param password
 	 */
-	public JwtRequest(String username, String passwors) {
+	public JwtRequest(String username, String password) {
 		super();
 		this.username = username;
-		this.passwors = passwors;
+		this.password = password;
 	}
 	public String getUsername() {
 		return username;
@@ -25,11 +25,11 @@ public class JwtRequest {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getPasswors() {
-		return passwors;
+	public String getPassword() {
+		return password;
 	}
-	public void setPasswors(String passwors) {
-		this.passwors = passwors;
+	public void setPasswors(String password) {
+		this.password = password;
 	}
 	
 	
