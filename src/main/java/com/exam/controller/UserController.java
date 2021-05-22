@@ -1,6 +1,6 @@
 package com.exam.controller;
 
-import com.exam.helper.UserNotFoundException;
+import com.exam.helper.UserFoundException;
 import com.exam.model.Role;
 import com.exam.model.User;
 import com.exam.model.UserRole;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -75,9 +74,9 @@ public class UserController {
 	}
 	
 	//exception handler
-	@ExceptionHandler(UserNotFoundException.class)
-	public ResponseEntity<?> exceptionHandler(UserPrincipalNotFoundException ex){
-		return new ResponseEntity<>("User not found",HttpStatus.NOT_FOUND);
+	@ExceptionHandler(UserFoundException.class)
+	public ResponseEntity<?> exceptionHandler(UserFoundException ex) {
+		return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
 	}
 	
 }
